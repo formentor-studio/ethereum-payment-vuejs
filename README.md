@@ -1,8 +1,6 @@
 # ethereum-payment-vuejs
 Simple Dapp and Vuejs app that manage payments in *ether*.  
   
-http://formentor-studio.com/simple-ethereum-payment
-
 The project includes the following modules:
 - Ethereum Dapp to manage payments
 - Shopping cart developed using Vuejs UI framework
