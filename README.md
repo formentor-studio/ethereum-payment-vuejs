@@ -1,5 +1,5 @@
 # ethereum-payment-vuejs
-Simple app to manage payments in *ether*.  
+Simple Dapp and Vuejs app that manage payments in *ether*.  
   
 http://formentor-studio.com/simple-ethereum-payment
 
@@ -43,22 +43,21 @@ npm run dapp:test
 **/dapp/contracts**  
 Sources of smart contracts (solidity code)
   
-
 **/dapp/build**  
 Json files that contain *abi* and *bytecode* generated in the compilation of smart contracts. Use **npm run dapp:build** for compilation.
 
-**/dapp/src/views**  
+**/src/views**  
 Vue components. These components are mapped with routes in *router.js*
 
-**/dapp/src/domain**  
+**/src/domain**  
 Domain classes. In this case, code related with smart contracts in blockchain
 
-**/dapp/src/components**  
+**/src/components**  
 Vue components.
 
 ## Usage
 
-> It is required to have Metamask installed https://metamask.io/
+> It is required to have Metamask plugin installed in browser https://metamask.io/
 
 1. Create Payments contract from http://localhost:8080/#/payments  
 
@@ -75,7 +74,7 @@ Once the contract is created in Blockchain network it is shown the detail
 
 ![Proceed to payment](_dev/proceed-payment.png)
 
-Once the payment transaction is commited in blockchain network it will be shown the detail of payments and it will appear the purchase
+Once the payment transaction is committed in blockchain will be redirected to the detail of payments contract. The detail will show your purchase.
 
 ![Payment detail](_dev/payment-detail-with-payment.png)
 
