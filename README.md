@@ -1,8 +1,32 @@
 # ethereum-payment-vuejs
+Simple app to manage payments in *ether*.  
+  
+http://formentor-studio.com/simple-ethereum-payment
+
+The project includes the following modules:
+- Ethereum Dapp to manage payments
+- Shopping cart developed using Vuejs UI framework
+
+In this project you will find:
+- Example of Ethereum smart contract developed in Solidity
+- Example of Vuejs app
+- Example of Vuex for management of state in Vue
+- Example of Vue Router for routing of Vue components
+
+## Stack
+- **Solidity** for smart contracts
+- **solcjs** for compilation of smart contracts
+- **Vuejs** as UI Framework (**Vuex** and **Vue Router**)
+- **Bootstrap** as toolkit for styles
 
 ## Project setup
 ```
 npm install
+```
+
+### Build Dapp smart contracts
+```
+npm run dapp:build
 ```
 
 ### Compiles and hot-reloads for development
@@ -10,20 +34,51 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Run Dapp tests
 ```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
+npm run dapp:test
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Structure of the project
+**/dapp/contracts**  
+Sources of smart contracts (solidity code)
+  
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+**/dapp/build**  
+Json files that contain *abi* and *bytecode* generated in the compilation of smart contracts. Use **npm run dapp:build** for compilation.
+
+**/dapp/src/views**  
+Vue components. These components are mapped with routes in *router.js*
+
+**/dapp/src/domain**  
+Domain classes. In this case, code related with smart contracts in blockchain
+
+**/dapp/src/components**  
+Vue components.
+
+## Usage
+
+> It is required to have Metamask installed https://metamask.io/
+
+1. Create Payments contract from http://localhost:8080/#/payments  
+
+![Create payments contract](_dev/create-contract.png)
+
+Once the contract is created in Blockchain network it is shown the detail  
+![Payments contract detail](_dev/create-contract-success.png)
+
+2. Go to shopping cart. http://localhost:8080/#/shopping
+
+![Shopping cart](_dev/shopping-cart.png)
+
+3. Add some fruits to the basket and proceed to payment
+
+![Proceed to payment](_dev/proceed-payment.png)
+
+Once the payment transaction is commited in blockchain network it will be shown the detail of payments and it will appear the purchase
+
+![Payment detail](_dev/payment-detail-with-payment.png)
+
+4. Withdraw funds from the payments contract to the owner account. http://localhost:8080/#/payments  
+
+![Withdraw](_dev/withdraw.png)

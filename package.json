@@ -1,15 +1,22 @@
 {
   "name": "ethereum-payment-vuejs",
   "version": "0.1.0",
-  "private": true,
+  "description": "Simple ethereum dapp using vuejs as UI framework",
+  "author": "formentor-studio.com",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dapp:build": "node dapp/compile.js; mocha dapp/test",
+    "dapp:test": "mocha dapp/test"
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "moment": "^2.24.0",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1",
+    "web3": "^1.2.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.10.0",
@@ -18,6 +25,11 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "ganache-cli": "^6.5.1",
+    "mocha": "^6.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "solc": "^0.5.10",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
@@ -29,7 +41,9 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": "warn"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
@@ -42,5 +56,7 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "keywords": [],
+  "license": "MIT"
 }
